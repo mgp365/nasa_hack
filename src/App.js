@@ -6,6 +6,10 @@ import Footer from './components/Footer';
 import { nasaServices } from './services/nasaApi';
 import './App.css';
 
+
+// AQUÍ DEBE AGARRAR DATOS KOI_DATA.CVS Y MOSTRAR UNO DE EJEMPLO
+// QUE EL USUARIO PUEDA METER TODOS LOS DATOS DEL QUE BUSCA EN CADA CASILLA DE DATO
+// NO IMPORTA SI NO SE LLENAN, VA A BUSCAR EN COMÚN CON LAS FILAS QUE SÍ TIENEN IGUALES
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
