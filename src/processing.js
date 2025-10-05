@@ -1,6 +1,6 @@
 const predictFromModel = async (features) => {
-  try {
-    const response = await fetch("https://abcd1234.ngrok.io/predict", {
+  try { 
+    const response = await fetch("https://unconglutinative-bustlingly-tonita.ngrok-free.dev/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ features }),
