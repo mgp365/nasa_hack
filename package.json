@@ -1,7 +1,6 @@
 {
   "name": "exohunters",
   "version": "1.0.0",
-  "type": "module",
   "description": "ExoHunters - NASA Database Search for Scientists and Students",
   "main": "index.js",
   "scripts": {
@@ -22,7 +21,7 @@
     "pdf-parse": "^2.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "5.0.1",
     "say": "^0.16.0"
   },
   "browserslist": {
