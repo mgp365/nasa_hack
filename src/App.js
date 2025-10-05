@@ -4,6 +4,7 @@ import SearchSection from './components/SearchSection';
 import ResultsSection from './components/ResultsSection';
 import Footer from './components/Footer';
 import { nasaServices } from './services/nasaApi';
+import ChatSidebar from './components/ChatSidebar';
 import './App.css';
 
 
@@ -14,13 +15,19 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeFilters, setActiveFilters] = useState([]);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
-  const handleSearch = async (query, searchType) => {
-    setSearchQuery(query);
+  const handleSearch = async (filters) => {
+    const label = Array.isArray(filters) && filters.length
+      ? filters.map(f => `${f.column}:${f.query}`).join(', ')
+      : '';
+    setSearchQuery(label);
+    setActiveFilters(filters || []);
     setIsLoading(true);
     
     try {
-      const results = await nasaServices.searchNASA(query, searchType);
+      const results = await nasaServices.searchNASA(filters);
       setSearchResults(results);
     } catch (error) {
       console.error('Error en la búsqueda:', error);
@@ -32,15 +39,17 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header onOpenChat={() => setIsChatOpen((v) => !v)} />
       <main className="main-content">
         <SearchSection onSearch={handleSearch} />
         <ResultsSection 
           results={searchResults} 
           isLoading={isLoading}
           searchQuery={searchQuery}
+          filters={activeFilters}
         />
       </main>
+      <ChatSidebar open={isChatOpen} onClose={() => setIsChatOpen(false)} />
       <Footer />
     </div>
   );
