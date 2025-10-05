@@ -1,4 +1,4 @@
 Lista de funcionalidades necesarias:
-- Página de IA gemini con la GEMINI_API_KEY: AIzaSyCoHZlTp2uVIxF0hBfE_R1DHou_x9Xx4JY
-    que resuelva las siguientes cuestiones:
-    - 
+- ai.js: chatbot con gemini como opción implementando los datos, falta conectarlo con la web (y ejecuta respuesta.wab si lo requiere)
+- app.js: hacer el buscador acorde a lo necesario descrito en los comentarios
+- processing.js: usuario mete datos nuevos suyos, todos los datos de las columnas y si no se llenan con predefinidos. Llama al google colab de machine learning para probarlo y devuelve el resultado.
