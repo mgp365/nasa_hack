@@ -1,0 +1,4 @@
+Lista de funcionalidades necesarias:
+- Página de IA gemini con la GEMINI_API_KEY: AIzaSyCoHZlTp2uVIxF0hBfE_R1DHou_x9Xx4JY
+    que resuelva las siguientes cuestiones:
+    - 
