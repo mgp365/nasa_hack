@@ -41,7 +41,7 @@ Una aplicación web minimalista desarrollada en React que permite a científicos
    npm start
    ```
 
-4. **Abre tu navegador** y ve a `http://localhost:3000`
+4. **Abre tu navegador** y ve a la siguiente liga `http://localhost:3000`
 
 ## 🔑 Configuración de la API de la NASA
 
